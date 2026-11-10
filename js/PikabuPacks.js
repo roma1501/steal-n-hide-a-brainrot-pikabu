@@ -12,7 +12,7 @@ PikabuShop.setup({
     ready: () => !!(typeof Game !== 'undefined' && Game.save && Game.save.econ && typeof Shop !== 'undefined' && Shop.state),
     visible: () => Game.state === 'menu' || Game.state === 'base',
     persist: () => Game.persist(),
-    button: { corner: 'tr', x: 12, y: 74 },
+    button: { corner: 'tl', x: 32, y: 296 },   // справа сверху в меню тесно (валюта, «Колесо», «Подарок»)
     packs: [
         { id: 'coins_s', type: 'consumable', icon: '🪙', name: 'Горсть монет', desc: '1 000 монет на облики и умения', grant: () => PIKABU_GIVE(1000, 0) },
         { id: 'coins_m', type: 'consumable', icon: '💰', name: 'Мешок монет', desc: '3 000 монет и 20 кристаллов', grant: () => PIKABU_GIVE(3000, 20) },
